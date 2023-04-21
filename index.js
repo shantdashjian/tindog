@@ -1,14 +1,14 @@
 import dogs from './data'
 import Dog from './Dog'
 
-let index = 0
+let currentIndex = 0
 const lastIndex = dogs.length - 1
 
-render(new Dog(dogs[index]))
+render(new Dog(dogs[currentIndex]))
 
 function nextDog() {
-	index = index == lastIndex ? 0 : index + 1
-	return new Dog(dogs[index])
+	currentIndex = currentIndex == lastIndex ? 0 : currentIndex + 1
+	return new Dog(dogs[currentIndex])
 }
 
 function render(dog) {
@@ -16,8 +16,7 @@ function render(dog) {
 	const like = hasBeenLiked ? "" : "hidden"
 	const nope = hasBeenSwiped && !hasBeenLiked ? "" : "hidden"
 
-	const dogEl = document.getElementById('dog')
-	dogEl.innerHTML = `
+	document.getElementById('dog').innerHTML = `
 		<img class="dog-img" src="${avatar}" alt="${name}">
 		<div class="dog-text flex">
 			<p class="dog-text-name-age" >${name}, ${age}</p>
@@ -34,15 +33,15 @@ const crossBtn = document.getElementById('cross-btn')
 const heartBtn = document.getElementById('heart-btn')
 
 crossBtn.addEventListener('click', () => {
-	dogs[index].hasBeenSwiped = true
-	dogs[index].hasBeenLiked = false
-	render(new Dog(dogs[index]))
-	setTimeout(() => render(nextDog()), 3000)
+	dogs[currentIndex].hasBeenSwiped = true
+	dogs[currentIndex].hasBeenLiked = false
+	render(new Dog(dogs[currentIndex]))
+	setTimeout(() => render(nextDog()), 2000)
 })
 
 heartBtn.addEventListener('click', () => {
-	dogs[index].hasBeenSwiped = true
-	dogs[index].hasBeenLiked = true
-	render(new Dog(dogs[index]))
-	setTimeout(() => render(nextDog()), 3000)
+	dogs[currentIndex].hasBeenSwiped = true
+	dogs[currentIndex].hasBeenLiked = true
+	render(new Dog(dogs[currentIndex]))
+	setTimeout(() => render(nextDog()), 2000)
 })

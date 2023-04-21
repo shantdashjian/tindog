@@ -11,14 +11,23 @@ body {
 .container {
     margin-left: auto;
     margin-right: auto;
-    border: 1px solid black;
-    min-height: 500px;
+    flex-direction: column;
+    align-items: center;
 }
 
 header{
-    height: 10vh;
+    height: 50px;
+    width: 285px;
     justify-content: space-between;
-    padding: 20px;
+    padding: 15px 5px;
+}
+
+header img {
+    height: 100%;
+}
+
+a:hover {
+    cursor: pointer;
 }
 
 .flex {
@@ -26,7 +35,7 @@ header{
 }
 
 .action-buttons {
-    height: 15vh;
+    height: 80px;
     gap: 20px;
     justify-content: center;
     padding: 20px;
@@ -49,7 +58,7 @@ header{
 }
 
 .dog {
-    height: 75vh;
+    height: 400px;
     justify-content: center;
     position: relative;
     width: fit-content;
@@ -105,5 +114,3 @@ p {
 .badge {
     width: 40%;
 }
-
-
