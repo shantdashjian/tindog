@@ -114,3 +114,7 @@ p {
 .badge {
     width: 40%;
 }
+
+button:focus {
+    outline: none;
+}
