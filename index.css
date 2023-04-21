@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    min-height: 500px;
+}
+
+header{
+    height: 10vh;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.flex {
+    display: flex;
+}
+
+.action-buttons {
+    height: 15vh;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.action-container {
+    justify-content: center;
+}
+
+.action-buttons button {
+    box-shadow: 0px 0px 10px #ddd;
+    border-radius: 50%;
+    padding: 28%;
+    background-color: white;
+    border: none;
+}
+
+.btn-img {
+   height: 100%;
+}
+
+.dog {
+    height: 75vh;
+    justify-content: center;
+    position: relative;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.dog-img {
+    border-radius: 10px;
+}
+p {
+    margin: 0;
+}
+
+.dog-text {
+    flex-direction: column;
+    position: absolute;
+    bottom: 4%;
+    left: 5%;
+    padding-right: 5%;
+    gap: 10px;
+}
+
+.dog-text-name-age {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #F8F8F8;
+}
+
+.dog-text-bio {
+    font-weight: 400;
+    font-size: 1rem;
+    color: #B7B7B7;
+}
+
+.cross-icon:hover {
+    cursor: pointer;
+    background: #FFE7EF;
+}
+
+.heart-icon:hover {
+    cursor: pointer;
+    background: #DBFFF4;
+}
+
+.like-nope-badges {
+    transform: rotate(-35deg);
+    position: absolute;
+    top: -5%;
+    left: -2%;
+}
+
+.badge {
+    width: 40%;
+}
+
+
